@@ -8,7 +8,7 @@ export const fetchCars = async (make = 'toyota') => {
     const response = await axios.get(`${BASE_URL}?make=${make}`, {
       headers: { 'X-Api-Key': API_KEY },
     });
-    return response.data;
+    return response.data; // deve retornar um array de carros
   } catch (error) {
     console.error('Erro ao buscar carros:', error);
     return [];

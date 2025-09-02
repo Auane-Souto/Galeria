@@ -1,31 +1,44 @@
 import styled from 'styled-components';
 
 export const GalleryContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
 `;
 
 export const Card = styled.div`
-  width: 300px;
-  box-shadow: 0 0 10px #ccc;
-  border-radius: 8px;
-  overflow: hidden;
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 export const CarImage = styled.img`
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
 `;
 
 export const CarName = styled.h3`
-  text-align: center;
-  padding: 0.5rem;
-  background-color: #f5f5f5;
-  margin: 0;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+`;
+
+export const SearchBar = styled.input`
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 `;
